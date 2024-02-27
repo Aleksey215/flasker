@@ -1,1 +1,2 @@
 # flasker
+Educational project
