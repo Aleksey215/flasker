@@ -1,10 +1,25 @@
 """
 Main page application
 """
+import os
+
+from dotenv import load_dotenv
 from flask import Flask, render_template
+from flask_wtf import FlaskForm
+from wtforms import StringField, SubmitField
+from wtforms.validators import DataRequired
+
 
 # Create a Flask Instance
 app = Flask(__name__)
+load_dotenv()
+app.config['SECRET_KEY'] = os.getenv('SECRET_KEY')
+
+
+# Create a form class
+class NameForm(FlaskForm):
+    name = StringField("What's Your Name", validators=[DataRequired()])
+    submit = SubmitField("Submit")
 
 
 # Create a route decorator
@@ -37,3 +52,15 @@ def page_not_found(e):
 @app.errorhandler(500)
 def server_error(e):
     return render_template("500.html"), 500
+
+
+# Create Name Page
+@app.route(rule='/name', methods=['GET', 'POST'])
+def name():
+    name = None
+    form = NameForm()
+    # Validate Form
+    if form.validate_on_submit():
+        name = form.name.data
+        form.name.data = ''
+    return render_template('name.html', name=name, form=form)
