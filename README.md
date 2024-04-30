@@ -22,18 +22,18 @@ flask run --debug
 <b>500.html</b> - custom page for error 500
 
 ### what was done:
-[x] html templates created<br/>
-[x] setting bootstrap<br/>
-[x] created custom errors and rendering<br/>
-[x] created form for creation users
+- [x] html templates created<br/>
+- [x] setting bootstrap<br/>
+- [x] created custom errors and rendering<br/>
+- [x] created form for creation users
 
 ### what need do:
-[ ] create and connect "static files"<br/>
-[_] create and connect database<br/>
-[_] use SQLAlchemy<br/>
-[_] set up migrations for database<br/>
-[_] create hashing passwords<br/>
-[_] create post model and form<br/>
-[_] create a user dashbord<br/>
-[_] create basig admin page<br/>
-[_] deploy app
+- [ ] create and connect "static files"<br/>
+- [ ] create and connect database<br/>
+- [ ] use SQLAlchemy<br/>
+- [ ] set up migrations for database<br/>
+- [ ] create hashing passwords<br/>
+- [ ] create post model and form<br/>
+- [ ] create a user dashbord<br/>
+- [ ] create basig admin page<br/>
+- [ ] deploy app
