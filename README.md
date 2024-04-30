@@ -12,8 +12,8 @@ flask run
 ```
 
 ### HTML teplates
-base.html - main template<br/>
-    in this file setting up for app front end (bootstrap)<br/>
-index.html - application main page<br/>
-navbar.html - navigation on app in header
+<b>base.html</b> - main template(in this file setting up for app front end (bootstrap))<br/>
+<b>index.html</b> - application main page<br/>
+<b>navbar.html</b> - navigation on app in header
+
 
