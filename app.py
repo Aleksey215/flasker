@@ -1,19 +1,17 @@
 """
 Main page application
 """
-import os
-
-from dotenv import load_dotenv
 from flask import Flask, render_template
 from flask_wtf import FlaskForm
 from wtforms import StringField, SubmitField
 from wtforms.validators import DataRequired
 
+from settings_management import settings
+
 
 # Create a Flask Instance
 app = Flask(__name__)
-load_dotenv()
-app.config['SECRET_KEY'] = os.getenv('SECRET_KEY')
+app.config['SECRET_KEY'] = settings['SECRET_KEY']
 
 
 # Create a form class
