@@ -28,7 +28,7 @@ flask run --debug
 [x] created form for creation users
 
 ### what need do:
-[_] create and connect "static files"<br/>
+[ ] create and connect "static files"<br/>
 [_] create and connect database<br/>
 [_] use SQLAlchemy<br/>
 [_] set up migrations for database<br/>
