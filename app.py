@@ -1,7 +1,7 @@
 """
 Main page application
 """
-from flask import Flask, render_template
+from flask import Flask, render_template, flash
 from flask_wtf import FlaskForm
 from wtforms import StringField, SubmitField
 from wtforms.validators import DataRequired
@@ -70,4 +70,5 @@ def name():
     if form.validate_on_submit():
         name = form.name.data
         form.name.data = ''
+        flash(message="Form Submitted Successfully!")
     return render_template('name.html', name=name, form=form)

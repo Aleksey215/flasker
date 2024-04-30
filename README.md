@@ -25,7 +25,9 @@ flask run --debug
 - [x] html templates created<br/>
 - [x] setting bootstrap<br/>
 - [x] created custom errors and rendering<br/>
-- [x] created form for creation users
+- [x] created form for creation users<br/>
+- [x] settings management with pydantic<br/>
+- [x] add flashed messages
 
 ### what need do:
 - [ ] create and connect "static files"<br/>
