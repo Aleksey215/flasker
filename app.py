@@ -33,10 +33,12 @@ def index():
 
 # localhost:5000/user/Alex
 @app.route('/user/<name>')
-def user(name):
+def user(name: str):
     """
     render template with variable user_name
-    name input from browser
+
+    Args:
+        name (str): name input from browser
     """
     return render_template("user.html", user_name=name)
 
@@ -44,7 +46,14 @@ def user(name):
 # create custom error pages
 # Invalid url
 @app.errorhandler(404)
-def page_not_found(e):
+def page_not_found(error):
+    """
+    Render 404 page error
+
+    Args:
+        error (_type_): exception
+
+    """
     return render_template("404.html"), 404
 
 
